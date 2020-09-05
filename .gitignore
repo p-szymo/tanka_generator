@@ -40,3 +40,4 @@ Thumbs.db
 # Manually added
 .ipynb_checkpoints/
 __pycache__/
+data/own_corpus.txt
