@@ -43,7 +43,10 @@ def word_grabber(word_list, num_syllables):
             iters += 1
             continue
     
-    return ('the', 1)
+    try:
+        return word_grabber(word_list, num_syllables)
+    except RecursionError:
+        return ('the', 1)
             
 
 def line_creator(word_dict, num_syllables, prompt=None):
