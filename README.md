@@ -1,8 +1,17 @@
 # tankanizer
 
-Using Allison Parrish's [Pronouncing](https://github.com/aparrish/pronouncingpy) to count syllables, I experiment with generating poetry in the tanka form using several corpora and a Markov chain.
+Using Allison Parrish's [Pronouncing](https://github.com/aparrish/pronouncingpy) to count syllables, I generate poetry in the tanka form using a corpus of Walt Whitman poems (created in [this notebook](https://github.com/p-szymo/poetrydb_poem_generator/blob/master/scraping_sandbox.ipynb) within my [poetrydb_poem_generator](https://github.com/p-szymo/poetrydb_poem_generator) project) and a Markov chain.
 
-Thinking as I'm typing that perhaps I can use the Markov chain to generate poetry that I can then use to train a more sophisticated RNN generator. Some sort of text generation loop.
+NOTE: A tanka is a poetic form originating in Japan, comprised of five lines in a distinct 5-7-5-7-7 syllabic structure.
+
+## To use the app locally, run the following in Terminal (after cloning the repo):
+```streamlit run app.py```
+
+## Future steps
+
+Within the app, I'd like users to be able to upload a corpus and use it to generate poetry.
+
+In a larger context, I'd like to use Markov chain across several corpora to generate poetry that I can then use to train a more sophisticated RNN (LSTM) generator. I envision some sort of text generation loop, the visual/written equivalent of audio feedback.
 
 Early stages!
 
