@@ -8,7 +8,7 @@ NOTE: The corpus was created in [this notebook](https://github.com/p-szymo/poetr
 ## To use the app locally, run the following in Terminal (after cloning the repo):
 ```streamlit run app.py```
 
-## To use the app on the WWW, click [here](https://peaceful-sierra-10406.herokuapp.com/)!
+## To use the app on the World Wide Web, click [here](https://peaceful-sierra-10406.herokuapp.com/)!
 
 ## Future steps
 
