@@ -1,0 +1,2 @@
+pronouncing==0.2.0
+streamlit==0.62.1
