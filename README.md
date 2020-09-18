@@ -14,7 +14,7 @@ NOTE: The corpus was created in [this notebook](https://github.com/p-szymo/poetr
 
 I'd like to allow users to upload a corpus within the app, which would then process the text and create a usable Markov dictionary to act as the source for the tankanizer.
 
-In a larger context, I'd like to use Markov chain across several corpora to generate poetry that I can then use to train a more sophisticated RNN (LSTM) generator. I envision some sort of text generation loop, the visual/written equivalent of audio feedback.
+In a larger context, I'd like to use Markov chains across several corpora to generate poetry that I can then use to train a more sophisticated RNN (LSTM) generator. I envision some sort of text generation loop, the visual/written equivalent of audio feedback.
 
 ## List of files
 - **data** folder - text files to use as a source for the generator.
