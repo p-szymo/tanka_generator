@@ -1,7 +1,7 @@
 # [tankanizer](https://peaceful-sierra-10406.herokuapp.com/)
 ## a Markov chain poetry generator with syllabic constraints
 
-Using Allison Parrish's [Pronouncing](https://github.com/aparrish/pronouncingpy) to count syllables, I generate poetry in the tanka form with a corpus of Walt Whitman poems and a Markov chain. A tanka is a poetic form originating in Japan, comprised of five lines in a distinct 5-7-5-7-7 syllabic structure.
+Using [Allison Parrish](https://www.decontextualize.com/)'s [Pronouncing](https://github.com/aparrish/pronouncingpy) to count syllables, I generate poetry in the tanka form with a corpus of Walt Whitman poems and a Markov chain. A tanka is a poetic form originating in Japan, comprised of five lines in a distinct 5-7-5-7-7 syllabic structure.
 
 NOTE: The corpus was created in [this notebook](https://github.com/p-szymo/poetrydb_poem_generator/blob/master/scraping_sandbox.ipynb) within my [poetrydb_poem_generator](https://github.com/p-szymo/poetrydb_poem_generator) project.
 
