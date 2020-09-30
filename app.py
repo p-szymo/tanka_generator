@@ -16,8 +16,9 @@ with open('data/whitman_dictionary.json', 'r') as hello:
 
 # message from the recommender-bot
 st.title('Greetings from the whitman_tankanizer.')
-st.header('Leaves of grass; let them pass.')
-# st.subheader()
+st.header("Leaves of grass; let 'em pass.")
+# st.header("Leaves of grass;")
+# st.header("let 'em pass.")
 
 tanka = tankanizer(whit_dict)
 
