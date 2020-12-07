@@ -185,7 +185,7 @@ def line_creator(word_dict, num_syllables, prompt=None):
     return line
 
 
-def tankanizer(word_dict, start_word=None):
+def tankanizer(word_dict, start_word=None, non_enders=None):
 
     '''
     Function to create a string in the tanka form, which has syllabic
@@ -204,6 +204,11 @@ def tankanizer(word_dict, start_word=None):
         Word to use as key, whose value is used to randomly choose the first
         word in the poem.
 
+    non_enders : list (str)
+        Words to disallow from being the final word in the generated text.
+        NOTE: To satisfy the syllabic constraint, this only works using (and
+              replacing) monosyllabic words.
+
 
     Output
     ------
@@ -221,6 +226,32 @@ def tankanizer(word_dict, start_word=None):
     line_3 = line_creator(word_dict, 5, line_2[-1])
     line_4 = line_creator(word_dict, 7, line_3[-1])
     line_5 = line_creator(word_dict, 7, line_4[-1])
+
+    # to prevent ending in certain (monosyllabic) words
+    if non_enders:
+
+        # look at final word
+        end_word = line_5[-1]
+
+        # replace if in the forbidden list
+        if end_word in non_enders:
+
+            # word list without certain (monosyllabic) words
+            valid_enders = [word for word in word_dict[end_word] if
+                            (word not in non_enders) &
+                            (syllable_count(phones_for_word(word)[0]) == 1)]
+
+            # replace with a different monosyllabic word within the previous word's list
+            if valid_enders:
+                line_5[-1] = word_grabber(valid_enders, 1)[0]
+
+            # if there are no viable options within the previous word's list, then choose
+            # a random monosyllabic word from the corpus's dictionary
+            else:
+                choices = [word for word in list(word_dict.keys()) if
+                            (word not in non_enders) &
+                            (syllable_count(phones_for_word(word)[0]) == 1)]
+                line_5[-1] = random.choice(choices)
 
     # list of lists
     lines = [line_1, line_2, line_3, line_4, line_5]
